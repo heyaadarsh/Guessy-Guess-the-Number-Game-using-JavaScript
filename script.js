@@ -16,7 +16,7 @@ const startOver = document.querySelector('.results')
 
 // const p = document.createElement('p');
 let prevGuess = [];
-let guessRem = 1;
+let guessRem = 0;
 let playGame = true;
 
 if(playGame){
@@ -25,8 +25,6 @@ if(playGame){
         const userVal = parseInt(input.value);
         // console.log(userVal);
         validateGuess(userVal);
-        
-        console.log(num);
     })
 }
 
@@ -73,7 +71,7 @@ function displayGuess(guess){
     input.value = '';
     prev.innerHTML += `${guess}, `;
     guessRem++;
-    rem.innerHTML = `Remaining Guess: ${11 - guessRem}`;
+    rem.innerHTML = `Remaining Guess: ${10 - guessRem}`;
 }
 
 function displayMessage(message){
