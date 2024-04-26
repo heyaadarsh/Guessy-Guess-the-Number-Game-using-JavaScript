@@ -1,4 +1,10 @@
-let num = parseInt(Math.random()*100+1);
+let num = 0;
+
+function chageNum(){
+    return num = parseInt(Math.random()*100+1);
+}
+
+chageNum();
 
 const guessyTitle = document.getElementById('topLine');
 let input = document.getElementById('inp');
@@ -19,6 +25,8 @@ if(playGame){
         const userVal = parseInt(input.value);
         // console.log(userVal);
         validateGuess(userVal);
+        
+        console.log(num);
     })
 }
 
@@ -96,6 +104,7 @@ function newGame(){
         // startOver.removeChild(p);
         lowOrHi.innerHTML = `Let's play the game!!`;
         playGame = true;
+        chageNum();
         guessyTitle.innerHTML = `So Again, I am thinking of a number between 1 to 100. Best Of Luck!`;
     });
 
